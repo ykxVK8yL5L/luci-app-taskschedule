@@ -8,7 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=luci-app-Taskschedule
-LUCI_DEPENDS:=+
+LUCI_DEPENDS:=
 
 
 include $(TOPDIR)/feeds/luci/luci.mk
