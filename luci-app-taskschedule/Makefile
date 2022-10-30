@@ -7,17 +7,11 @@
 
 include $(TOPDIR)/rules.mk
 
-LUCI_TITLE:=luci-app-Synology
-LUCI_DEPENDS:=+kmod-tun +qemu-bridge-helper +qemu-x86_64-softmmu +kmod-kvm-intel
+LUCI_TITLE:=luci-app-Taskschedule
+LUCI_DEPENDS:=+
 
 
 include $(TOPDIR)/feeds/luci/luci.mk
-
-define Package/luci-app-synology/postinst
-#!/bin.sh
-chmod 755 /etc/init.d/synology
-exit 0
-endef
 
 
 # call BuildPackage - OpenWrt buildroot signature
