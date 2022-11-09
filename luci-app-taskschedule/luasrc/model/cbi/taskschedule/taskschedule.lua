@@ -42,6 +42,7 @@ exec.render = function(self, section, scope)
     running_pid = luci.sys.exec("pgrep -f '"..sl.."'")
     if running_pid ==nil or running_pid == '' then
     	self.title = '执行'
+	self.inputstyle = "apply"
     else
     	self.title = running_pid
     	self.inputstyle = "remove"
