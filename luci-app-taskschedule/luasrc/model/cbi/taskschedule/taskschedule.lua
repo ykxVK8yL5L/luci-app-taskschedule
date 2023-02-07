@@ -19,15 +19,6 @@ s.anonymous = true
 s.addremove = true
 s.template = "cbi/tblsection"
 
-name = s:option(Value, "name", translate("名称【英文】"))
-name.rmempty = false
-name.placeholder = "任务名称[英文]"
-
-
-dm = s:option(Value, "shell", translate("命令"))
-dm.rmempty = false
-dm.placeholder = "shell命令"
-
 remark = s:option(Value, "remark", translate("备注"))
 remark.rmempty = true
 remark.placeholder = "备注"
@@ -66,6 +57,18 @@ exec.write = function(self, section)
     end
 	luci.sys.exec(command)
 end
+
+
+name = s:option(Value, "name", translate("名称【英文】"))
+name.rmempty = false
+name.placeholder = "任务名称[英文]"
+
+
+dm = s:option(Value, "shell", translate("命令"))
+dm.rmempty = false
+dm.placeholder = "shell命令"
+
+
 
 show_log = s:option(Button, "show_log", translate("日志"))
 show_log.inputstyle = "apply"
